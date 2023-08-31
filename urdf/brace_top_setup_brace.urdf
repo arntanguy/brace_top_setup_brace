@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="brace_top_setup_brace">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0 2.77555756156289E-17 -0.0125276433923951"
+        rpy="0 0 0" />
+      <mass
+        value="0.37798" />
+      <inertia
+        ixx="0.00046296745908780347"
+        ixy="5.441980034053705E-14"
+        ixz="-7.733893524332598E-15"
+        iyy="0.00046296745915319165"
+        iyz="1.2220117950102143E-14"
+        izz="0.0009126767560167389" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://brace_top_setup_brace/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://brace_top_setup_brace/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="Link1">
+    <inertial>
+      <origin
+        xyz="1.1394829012662E-05 6.09187225078522E-06 -0.00775007998429399"
+        rpy="0 0 0" />
+      <mass
+        value="0.09563" />
+      <inertia
+        ixx="1.531812789483457E-05"
+        ixy="2.2005795637996187E-08"
+        ixz="-1.7867126107879917E-09"
+        iyy="1.533587913058588E-05"
+        iyz="-1.2132149437021883E-08"
+        izz="2.6407689538955312E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://brace_top_setup_brace/meshes/Link1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.776470588235294 0.756862745098039 0.737254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://brace_top_setup_brace/meshes/Link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint1"
+    type="fixed">
+    <origin
+      xyz="0 0 -0.025"
+      rpy="0 0 0.523598775598301" />
+    <parent
+      link="base_link" />
+    <child
+      link="Link1" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="Link2">
+    <inertial>
+      <origin
+        xyz="-5.8306807115438E-05 -0.0268747492185129 0.14989423728049"
+        rpy="0 0 0" />
+      <mass
+        value="2.47015" />
+      <inertia
+        ixx="0.0135229086056646"
+        ixy="9.016109441920753e-07"
+        ixz="-2.265199321598308e-06"
+        iyy="0.01557364134669567"
+        iyz="0.000833018193061293"
+        izz="0.00974954882949906" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://brace_top_setup_brace/meshes/Link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://brace_top_setup_brace/meshes/Link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint2"
+    type="fixed">
+    <origin
+      xyz="0 0 -0.365748"
+      rpy="0 0 0" />
+    <parent
+      link="Link1" />
+    <child
+      link="Link2" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>
