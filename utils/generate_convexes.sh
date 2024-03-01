@@ -40,4 +40,4 @@ function generate_convexes()
   done
 }
 
-generate_convexes "$HOME/mc-rtc/panda/catkin_ws_panda_prosthesis/src/brace_top_setup/meshes" ""
+generate_convexes "$HOME/mc-rtc/src/panda/catkin_ws_panda_prosthesis/src/brace_top_setup_brace/meshes" ""
