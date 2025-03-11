@@ -21,9 +21,7 @@ endif()
 
 if(${ROS_VERSION} EQUAL 1)
   catkin_package()
-elseif(${ROS_VERSION} EQUAL 2)
-  set(CATKIN_PACKAGE_SHARE_DESTINATION share/${PROJECT_NAME})
-else()
+
   set(CATKIN_PACKAGE_SHARE_DESTINATION share/mc_rtc/${PROJECT_NAME})
 
   include(CMakePackageConfigHelpers)
@@ -36,6 +34,8 @@ else()
 
   install(FILES "${VERSION_CONFIG}" "${PROJECT_CONFIG}" DESTINATION "${CONFIG_INSTALL_DIR}")
   install(FILES package.xml DESTINATION "${CATKIN_PACKAGE_SHARE_DESTINATION}")
+elseif(${ROS_VERSION} EQUAL 2)
+  set(CATKIN_PACKAGE_SHARE_DESTINATION share/${PROJECT_NAME})
 endif()
 
 install(DIRECTORY convex/
