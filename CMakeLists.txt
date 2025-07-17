@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.20)
 cmake_policy(SET CMP0048 NEW)
 project(brace_top_setup_brace VERSION 1.0.0)
 
